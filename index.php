@@ -38,7 +38,8 @@
 		</header>
 
 		<div class="page-content">
-			<p><strong>Hello world!</strong> You might be wondering... what is this page doing on the internet? Read on, curious one, read on &mdash; and if you're still confused, please <a href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a>.</p>
+			<p><strong>Hello world!</strong> You might be wondering... what is this page doing on the internet? Read on, curious one, read on &mdash; and if you're still confused afterwards, please <a href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a>.</p>
+
 			<h3 id="overview">Overview</h3>
 			<p><a href="https://wordpress.org/gutenberg/">Gutenberg</a> is WordPress' next-generation editor. It's pretty shiny and awesome. We want to make sure everyone can use it when WordPress 5.0 is released.</p>
 			<p>"But how do we know whether sites are compatible?" you might ask.</p>
