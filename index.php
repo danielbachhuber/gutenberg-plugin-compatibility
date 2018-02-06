@@ -1,5 +1,6 @@
 <?php
 
+// You can put PHP here and it will execute!
 
 ?>
 <!DOCTYPE html>
@@ -7,6 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gutenberg Plugin Compatibility</title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" />
 	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -21,6 +23,10 @@
 		.page-footer {
 			margin-top: 20px;
 			margin-bottom: 20px;
+		}
+		.kn-container.kn-scene {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	</style>
 </head>
@@ -39,6 +45,7 @@
 			<p>Great question! Most WordPress installations have a dozen or more active plugins, so <em>plugin incompatibility</em> is the most likely reason someone can't use Gutenberg on day one. It sure would be helpful if we had a way to capture this data!</p>
 
 			<h3 id="plugin-testing">Plugin Testing</h3>
+			<p>We're building a giant ol' database of Gutenberg plugin compatibility, and we'd love to have your help.</p>
 			<p>For our purposes, compatibility is defined as:</p>
 			<ol>
 				<li>A WordPress user can perform the same functional task with Gutenberg active.</li>
