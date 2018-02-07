@@ -48,12 +48,14 @@
 		</header>
 
 		<div class="page-content">
-			<p><strong>Hello world!</strong> You might be wondering... what is this page doing on the internet? Read on, curious one, read on &mdash; and if you're still confused afterwards, please <a href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a>.</p>
+			<p><strong>Hello world!</strong> You might be wondering... what is this page doing on the internet? Read on, curious one, read on &mdash; and if you're still confused afterwards, please <a href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a> and we'll do our best to clarify.</p>
 
 			<h3 id="overview">Overview</h3>
 			<p><a href="https://wordpress.org/gutenberg/">Gutenberg</a> is WordPress' next-generation editor. It's pretty shiny and awesome. We want to make sure everyone can use it when WordPress 5.0 is released.</p>
 			<p>"But how do we know whether sites are compatible?" you might ask.</p>
 			<p>Great question! Most WordPress installations have a dozen or more active plugins, so <em>plugin incompatibility</em> is the most likely reason someone can't use Gutenberg on day one. It sure would be helpful if we had a way to capture this data!</p>
+
+			<p>For more background, read through <a href="https://github.com/WordPress/gutenberg/issues/4072">wordpress/gutenberg#4072</a>.</p>
 
 			<h3 id="plugin-testing">Plugin Testing</h3>
 			<p>We're building a giant ol' database of Gutenberg plugin compatibility, and we'd love to have your help.</p>
@@ -64,6 +66,11 @@
 			</ol>
 
 			<p>Want to help us test? Simply launch a test environment and then record your results.</p>
+			
+			<div class="button-group">
+				<a class="button" href="#">Launch Test Environment</a>
+				<a class="button" href="#">Record Result</a>
+			</div>
 
 			<h3>Our Results</h3>
 
@@ -73,7 +80,7 @@
 		</div>
 
 		<footer class="text-center page-footer">
-			<small>Foo bar</small>
+			<small>Foo bar &bull; <a target="_blank" href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/">Hack this site</a></small>
 		</footer>
 
 	</div>
