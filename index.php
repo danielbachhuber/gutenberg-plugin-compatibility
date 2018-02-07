@@ -28,6 +28,9 @@
 			padding-left: 0;
 			padding-right: 0;
 		}
+		.kn-container .kn-label {
+			color: white;
+		}
 	</style>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49623239-2"></script>
