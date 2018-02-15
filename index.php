@@ -1,7 +1,5 @@
 <?php
-
 // You can put PHP here and it will execute!
-$sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00a5zATo0m&url=wp-admin/plugins.php&plugins=';
 ?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js no-svg">
@@ -33,71 +31,6 @@ $sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00
 		}
 	</style>
 
-	<script>
-	jQuery(document).ready(function($){
-
-		$( '#launch-test-button' ).on( 'click', function(ev) {
-			ev.stopPropagation();
-			ev.preventDefault();
-			fetchNextTest();
-		});
-
-		function fetchNextTest() {
-			var baseURL = 'https://api.knack.com/v1/pages/scene_1/views/view_1/records';
-			var requestFilters = [
-				{
-				'field':'field_2',
-				'operator':'is',
-				'value':'unknown'
-				}
-			];
-			var requestURL = baseURL + '?filters=' + encodeURIComponent(JSON.stringify(requestFilters));
-			Knack.showSpinner();
-			$.ajax({
-				url: requestURL,
-				method: "GET",
-				beforeSend: function(xhr){
-					xhr.setRequestHeader('Authorization', Knack.getUserToken() );
-					xhr.setRequestHeader('X-Knack-Application-Id', Knack.application_id );
-					xhr.setRequestHeader('content-type', 'application/json');
-				},
-			})
-			.done(function(result) {
-				Knack.hideSpinner();
-				console.log(result);
-				pluginID   = result.records[0].id;
-				pluginSlug = result.records[0].field_1;
-				window.open( '<?php echo $sandbox_base_link; ?>' + pluginSlug );
-				setTestingState(pluginID, pluginSlug);
-			});
-		}
-
-		function setTestingState(pluginID, slug) {
-			var baseURL = 'https://api.knack.com/v1/pages/scene_1/views/view_1/records/';
-			var requestURL = baseURL + pluginID;
-			var requestData = {
-				'field_2':'testing',
-				'field_2_raw':'testing',
-			};
-			Knack.showSpinner();
-			$.ajax({
-				url: requestURL,
-				method: "PUT",
-				data: JSON.stringify(requestData),
-				beforeSend: function(xhr){
-					xhr.setRequestHeader('Authorization', Knack.getUserToken() );
-					xhr.setRequestHeader('X-Knack-Application-Id', Knack.application_id );
-					xhr.setRequestHeader('content-type', 'application/json');
-				},
-			})
-			.done(function(result) {
-				Knack.hideSpinner();
-				console.log(result);
-			});
-		}
-
-	});
-	</script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49623239-2"></script>
 	<script>
@@ -137,8 +70,8 @@ $sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00
 			<p>Want to help us test? Simply launch a test environment and then record your results.</p>
 
 			<div class="button-group">
-				<a id="launch-test-button" class="button" href="<?php echo $sandbox_link ?>" target="_blank">Launch Test Environment</a>
-				<a class="button" href="#">Record Result</a>
+				<button id="launch-test-button" class="button" disabled="disabled">Launch Test Environment</button>
+				<button class="button" href="#" disabled="disabled">Record Result</button>
 			</div>
 
 			<h3>Our Results</h3>
