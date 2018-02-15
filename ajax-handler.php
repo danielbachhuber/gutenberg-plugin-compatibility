@@ -8,8 +8,9 @@ $filters    = isset( $_REQUEST['filters'] ) ? $_REQUEST['filters'] : '';
 $data       = isset( $_REQUEST['data'] ) ? $_REQUEST['data'] : '';
 
 
-function request_get() {
-	$ch = curl_init("https://api.knack.com/v1/objects/object_1/records");
+function request_get($filters) {
+	die("https://api.knack.com/v1/objects/object_1/records/?filters=" . $filters );
+	$ch = curl_init("https://api.knack.com/v1/objects/object_1/records/?filters=" . $filters );
 	curl_setopt( $ch, CURLOPT_HTTPHEADER, array(
 		'X-Knack-Application-Id:' . KNACK_APP_ID,
 		'X-Knack-REST-API-KEY:' . KNACK_API_KEY,
@@ -43,7 +44,7 @@ function request_put($record_id) {
 }
 
 if ( 'get_record' == $action ) {
-	request_get();
+	request_get($filters);
 } else if ( 'update_record' == $action ) {
 	request_put($record_id);
 }

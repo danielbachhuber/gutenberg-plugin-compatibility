@@ -3,8 +3,7 @@
 // You can put PHP here and it will execute!
 require_once( 'local-config.php' );
 
-$sandbox_base_link = 'http://wpsandbox.pro/create?src=joyous-wolverine&key=UEvLtrBeTU8ohQn9&url=wp-admin/post-new.php&plugins=';
-
+$sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00a5zATo0m&url=wp-admin/post-new.php&plugins=';
 ?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js no-svg">
@@ -39,6 +38,44 @@ $sandbox_base_link = 'http://wpsandbox.pro/create?src=joyous-wolverine&key=UEvLt
 	<script>
 	jQuery(document).ready(function($){
 
+		$( '#launch-test-button' ).on( 'click', function(ev) {
+			ev.stopPropagation();
+			ev.preventDefault();
+			fetchNextTest();
+		});
+
+		function fetchNextTest() {
+			var baseURL = 'https://api.knack.com/v1/objects/object_1/records';
+			var requestFilters = [
+				{
+				'field':'field_2',
+				'operator':'is',
+				'value':'unknown'
+				}
+			];
+			var requestURL = baseURL + '?filters=' + encodeURIComponent(JSON.stringify(requestFilters));
+			Knack.showSpinner();
+			$.ajax({
+				url: requestURL,
+				method: "GET",
+				beforeSend: function(xhr){
+					//xhr.setRequestHeader('Authorization', Knack.getUserToken() );
+					//xhr.setRequestHeader('X-Knack-Application-Id', Knack.application_id, );
+					xhr.setRequestHeader('X-Knack-Application-Id', '<?php echo KNACK_APP_ID; ?>' );
+					xhr.setRequestHeader('X-Knack-REST-API-KEY', '<?php echo KNACK_API_KEY; ?>' );
+					xhr.setRequestHeader('content-type', 'application/json');
+				},
+			})
+			.done(function(result) {
+				Knack.hideSpinner();
+				console.log(result);
+				pluginID   = result.records[0].id;
+				pluginSlug = result.records[0].field_1;
+				window.open( '<?php echo $sandbox_base_link; ?>' + pluginSlug );
+				setTestingState(pluginID, pluginSlug);
+			});
+		}
+
 		function setTestingState(pluginID, slug) {
 			var baseURL = 'https://api.knack.com/v1/objects/object_1/records/';
 			var requestURL = baseURL + pluginID;
@@ -48,53 +85,20 @@ $sandbox_base_link = 'http://wpsandbox.pro/create?src=joyous-wolverine&key=UEvLt
 			};
 			Knack.showSpinner();
 			$.ajax({
-				//url: requestURL,
-				url: 'ajax-handler.php?action=update_record&plugin_id=' + pluginID,
+				url: requestURL,
 				method: "PUT",
 				data: JSON.stringify(requestData),
-			})
-			.done(function(result) {
-				Knack.hideSpinner();
-				result = JSON.parse(result);
-				console.log(result);
-			});
-		}
-
-		function fetchNextTest() {
-			var baseURL = 'https://api.knack.com/v1/objects/object_1/records';
-			var requestFilters = [
-				{
-				'field':'field_2',
-				'operator':'is',
-				'value':'testing'
-				}
-			];
-			var requestURL = baseURL + '?filters=' + encodeURIComponent(JSON.stringify(requestFilters));
-			Knack.showSpinner();
-			$.ajax({
-				//url: requestURL,
-				url: 'ajax-handler.php?action=get_record',
-				method: "GET",
 				beforeSend: function(xhr){
+					xhr.setRequestHeader('X-Knack-Application-Id', '<?php echo KNACK_APP_ID; ?>' );
+					xhr.setRequestHeader('X-Knack-REST-API-KEY', '<?php echo KNACK_API_KEY; ?>' );
 					xhr.setRequestHeader('content-type', 'application/json');
 				},
 			})
 			.done(function(result) {
 				Knack.hideSpinner();
-				result = JSON.parse(result);
 				console.log(result);
-				pluginID   = result.records[0].id;
-				pluginSlug = result.records[0].field_1;
-				//window.open( '<?php echo $sandbox_base_link; ?>' + pluginSlug );
-				setTestingState(pluginID, pluginSlug);
 			});
 		}
-
-		$( '#launch-test-button' ).on( 'click', function(ev) {
-			ev.stopPropagation();
-			ev.preventDefault();
-			fetchNextTest();
-		});
 
 	});
 	</script>
