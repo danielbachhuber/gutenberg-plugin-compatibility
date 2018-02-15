@@ -1,9 +1,7 @@
 <?php
 
 // You can put PHP here and it will execute!
-require_once( 'local-config.php' );
-
-$sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00a5zATo0m&url=wp-admin/post-new.php&plugins=';
+$sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00a5zATo0m&url=wp-admin/plugins.php&plugins=';
 ?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js no-svg">
@@ -45,7 +43,7 @@ $sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00
 		});
 
 		function fetchNextTest() {
-			var baseURL = 'https://api.knack.com/v1/objects/object_1/records';
+			var baseURL = 'https://api.knack.com/v1/pages/scene_1/views/view_1/records';
 			var requestFilters = [
 				{
 				'field':'field_2',
@@ -59,10 +57,8 @@ $sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00
 				url: requestURL,
 				method: "GET",
 				beforeSend: function(xhr){
-					//xhr.setRequestHeader('Authorization', Knack.getUserToken() );
-					//xhr.setRequestHeader('X-Knack-Application-Id', Knack.application_id, );
-					xhr.setRequestHeader('X-Knack-Application-Id', '<?php echo KNACK_APP_ID; ?>' );
-					xhr.setRequestHeader('X-Knack-REST-API-KEY', '<?php echo KNACK_API_KEY; ?>' );
+					xhr.setRequestHeader('Authorization', Knack.getUserToken() );
+					xhr.setRequestHeader('X-Knack-Application-Id', Knack.application_id );
 					xhr.setRequestHeader('content-type', 'application/json');
 				},
 			})
@@ -77,7 +73,7 @@ $sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00
 		}
 
 		function setTestingState(pluginID, slug) {
-			var baseURL = 'https://api.knack.com/v1/objects/object_1/records/';
+			var baseURL = 'https://api.knack.com/v1/pages/scene_1/views/view_1/records/';
 			var requestURL = baseURL + pluginID;
 			var requestData = {
 				'field_2':'testing',
@@ -89,8 +85,8 @@ $sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00
 				method: "PUT",
 				data: JSON.stringify(requestData),
 				beforeSend: function(xhr){
-					xhr.setRequestHeader('X-Knack-Application-Id', '<?php echo KNACK_APP_ID; ?>' );
-					xhr.setRequestHeader('X-Knack-REST-API-KEY', '<?php echo KNACK_API_KEY; ?>' );
+					xhr.setRequestHeader('Authorization', Knack.getUserToken() );
+					xhr.setRequestHeader('X-Knack-Application-Id', Knack.application_id );
 					xhr.setRequestHeader('content-type', 'application/json');
 				},
 			})
