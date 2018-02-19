@@ -1,6 +1,8 @@
 $(document).on('knack-scene-render.any', function(event, page) {
 	var launchTestButton = $('#launch-test-button');
 
+	launchTestButton.off( 'click.launch-test' );
+
 	if (typeof Knack.getUserToken() !== 'undefined' ) {
 		launchTestButton.removeAttr('disabled').show();
 		$('#requires-login').hide();
@@ -11,7 +13,7 @@ $(document).on('knack-scene-render.any', function(event, page) {
 		$('#register-login').removeAttr('disabled').show();
 	}
 
-	launchTestButton.on( 'click', function(ev) {
+	launchTestButton.on( 'click.launch-test', function(ev) {
 		ev.stopPropagation();
 		ev.preventDefault();
 		fetchNextTest();
