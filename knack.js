@@ -37,7 +37,7 @@ $(document).on('knack-scene-render.any', function(event, page) {
 		Knack.showSpinner();
 		$.ajax({
 			url: requestURL,
-			method: "GET",
+			type: "GET",
 			beforeSend: function(xhr){
 				xhr.setRequestHeader('Authorization', Knack.getUserToken() );
 				xhr.setRequestHeader('X-Knack-Application-Id', Knack.application_id );
@@ -65,12 +65,12 @@ $(document).on('knack-scene-render.any', function(event, page) {
 		Knack.showSpinner();
 		$.ajax({
 			url: 'https://api.wordpress.org/plugins/info/1.0/' + slug + '.json',
-			method: 'GET',
+			type: 'GET',
 		}).done(function( plugin ){
 			requestData['field_4'] = plugin['version'];
 			$.ajax({
 				url: requestURL,
-				method: 'PUT',
+				type: 'PUT',
 				data: JSON.stringify(requestData),
 				beforeSend: function(xhr){
 					xhr.setRequestHeader('Authorization', Knack.getUserToken() );
