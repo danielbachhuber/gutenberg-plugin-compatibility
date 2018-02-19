@@ -1,16 +1,17 @@
 $(document).on('knack-scene-render.any', function(event, page) {
+	var launchTestButton = $('#launch-test-button');
 
 	if (typeof Knack.getUserToken() !== 'undefined' ) {
-		$('#launch-test-button').removeAttr('disabled').show();
+		launchTestButton.removeAttr('disabled').show();
 		$('#requires-login').hide();
 		$('#register-login').hide();
 	} else {
-		$('#launch-test-button').hide();
+		launchTestButton.hide();
 		$('#requires-login').show();
 		$('#register-login').removeAttr('disabled').show();
 	}
 
-	$('#launch-test-button').on( 'click', function(ev) {
+	launchTestButton.on( 'click', function(ev) {
 		ev.stopPropagation();
 		ev.preventDefault();
 		fetchNextTest();
@@ -24,6 +25,7 @@ $(document).on('knack-scene-render.any', function(event, page) {
 	}
 
 	function fetchNextTest() {
+		launchTestButton.attr('disabled', 'disabled');
 		var baseURL = 'https://api.knack.com/v1/pages/scene_1/views/view_1/records';
 		var requestFilters = [
 			{
@@ -50,12 +52,11 @@ $(document).on('knack-scene-render.any', function(event, page) {
 			var sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00a5zATo0m&url=wp-admin/plugins.php&plugins=';
 			window.open( sandbox_base_link + pluginSlug );
 			setTestingState(pluginID, pluginSlug);
+			launchTestButton.removeAttr('disabled');
 		});
 	}
 
 	function setTestingState(pluginID, slug) {
-		// Load the correct view
-		window.location.hash = '#compatibility-results/edit-plugin/' + pluginID + '/';
 		var baseURL = 'https://api.knack.com/v1/pages/scene_1/views/view_1/records/';
 		var requestURL = baseURL + pluginID;
 		var requestData = {
@@ -75,6 +76,8 @@ $(document).on('knack-scene-render.any', function(event, page) {
 		})
 		.done(function(result) {
 			Knack.hideSpinner();
+			// Load the correct view
+			window.location.hash = '#compatibility-results/edit-plugin/' + pluginID + '/';
 		});
 	}
 
