@@ -17,10 +17,8 @@ $(document).on('knack-scene-render.any', function(event, page) {
 		fetchNextTest();
 	});
 
-	var hash = window.location.hash;
-	hash = hash.replace(/\/$/,'');
 	// Force logged-in user back to compatibility results
-	if ( '#account-details' === hash ) {
+	if ( 0 === window.location.hash.indexOf('#account-details' ) ) {
 		window.location.hash = '#compatibility-results';
 	}
 
