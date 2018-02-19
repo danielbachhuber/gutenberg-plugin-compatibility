@@ -1,7 +1,5 @@
 <?php
-
 // You can put PHP here and it will execute!
-
 ?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js no-svg">
@@ -32,6 +30,7 @@
 			color: white;
 		}
 	</style>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49623239-2"></script>
 	<script>
@@ -69,10 +68,10 @@
 			</ol>
 
 			<p>Want to help us test? Simply launch a test environment and then record your results.</p>
-			
+
 			<div class="button-group">
-				<a class="button" href="#">Launch Test Environment</a>
-				<a class="button" href="#">Record Result</a>
+				<button id="launch-test-button" class="button" disabled="disabled">Launch Test Environment</button>
+				<button class="button" href="#" disabled="disabled">Record Result</button>
 			</div>
 
 			<h3>Our Results</h3>
