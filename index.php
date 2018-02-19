@@ -29,6 +29,10 @@
 		.kn-container .kn-label {
 			color: white;
 		}
+		.kn-container .filters-list select:not(empty)::after,
+		.kn-container .kn-select:not(empty)::after {
+			display: none;
+		}
 	</style>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
