@@ -54,33 +54,34 @@
 		</header>
 
 		<div class="page-content">
-			<p><strong>Hello world!</strong> You might be wondering... what is this page doing on the internet? Read on, curious one, read on &mdash; and if you're still confused afterwards, please <a href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a> and we'll do our best to clarify.</p>
+			<p>Help us test Gutenberg plugin compatibility!</p>
 
-			<h3 id="overview">Overview</h3>
-			<p><a href="https://wordpress.org/gutenberg/">Gutenberg</a> is WordPress' next-generation editor. It's pretty shiny and awesome. We want to make sure everyone can use it when WordPress 5.0 is released.</p>
-			<p>"But how do we know whether sites are compatible?" you might ask.</p>
-			<p>Great question! Most WordPress installations have a dozen or more active plugins, so <em>plugin incompatibility</em> is the most likely reason someone can't use Gutenberg on day one. It sure would be helpful if we had a way to capture this data!</p>
+			<p><strong><em>How do I know whether a plugin is compatible with Gutenberg?</em></strong></p>
 
-			<p>For more background, read through <a href="https://github.com/WordPress/gutenberg/issues/4072">wordpress/gutenberg#4072</a>.</p>
-
-			<h3 id="plugin-testing">Plugin Testing</h3>
-			<p>We're building a giant ol' database of Gutenberg plugin compatibility, and we'd love to have your help.</p>
-			<p>For our purposes, compatibility is defined as:</p>
+			<p>For our purposes, a plugin is compatible with Gutenberg when:</p>
 			<ol>
-				<li>A WordPress user can perform the same functional task with Gutenberg active.</li>
+				<li>A WordPress user can perform the same functional task with Gutenberg active. For instance, the "Add Media" button doesn't exist in Gutenberg, but a WordPress user can add media with the inserter. Feature-parity, essentially.</li>
 				<li>There are no (obvious) errors when the WordPress plugin is active alongside Gutenberg.</li>
 			</ol>
 
-			<p>Want to help us test? Simply launch a test environment and then record your results.</p>
+			<p><strong><em>Why are you doing this?</em></strong></p>
 
-			<div class="button-group">
-				<button id="launch-test-button" class="button" disabled="disabled">Launch Test Environment</button>
-				<button class="button" href="#" disabled="disabled">Record Result</button>
+			<p>We want to make sure everyone can use Gutenberg but <em>plugin incompatibility</em> is a likely reason they won't be able to. Having this compatibility data will help us strategize the WordPress 5.0 release process.</p>
+
+			<p><strong><em>This sounds important. What do I need to do?</em></strong></p>
+
+			<p>Simply launch a test environment and then record your results. If you have questions, please <a href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a> and we'll do our best to clarify.</p>
+
+			<div class="callout warning" id="requires-login" style="display:none;">
+				<p>Plugin testing requires signing in. Please register for an account, and sign in once your account is approved.</p>
 			</div>
 
-			<h3>Our Results</h3>
+			<div class="button-group">
+				<a id="register-login" href="#account-details" class="button" disabled="disabled" style="display:none;">Register / Login</a>
+				<button id="launch-test-button" class="button" disabled="disabled">Launch Test Environment</button>
+			</div>
 
-			<div id="knack-dist_2">Loading results over the internet...</div>
+			<div id="knack-dist_2">Loading plugin database over the internet...</div>
 			<script type="text/javascript">app_id="5a7a319707b4fd4dcd5ab1a5";distribution_key="dist_2";</script><script type="text/javascript" src="https://loader.knack.com/5a7a319707b4fd4dcd5ab1a5/dist_2/knack.js"></script>
 
 		</div>

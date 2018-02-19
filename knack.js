@@ -1,7 +1,13 @@
 $(document).on('knack-scene-render.any', function(event, page) {
 
 	if (typeof Knack.getUserToken() !== 'undefined' ) {
-		$('#launch-test-button').prop('disabled',false);
+		$('#launch-test-button').removeAttr('disabled').show();
+		$('#requires-login').hide();
+		$('#register-login').hide();
+	} else {
+		$('#launch-test-button').hide();
+		$('#requires-login').show();
+		$('#register-login').removeAttr('disabled').show();
 	}
 
 	$('#launch-test-button').on( 'click', function(ev) {
