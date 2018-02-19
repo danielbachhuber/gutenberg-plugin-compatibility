@@ -7,6 +7,10 @@ $(document).on('knack-scene-render.any', function(event, page) {
 		launchTestButton.removeAttr('disabled').show();
 		$('#requires-login').hide();
 		$('#register-login').hide();
+		// Force logged-in user back to compatibility results
+		if ( 0 === window.location.hash.indexOf('#account-details' ) ) {
+			window.location.hash = '#compatibility-results';
+		}
 	} else {
 		launchTestButton.hide();
 		$('#requires-login').show();
@@ -18,11 +22,6 @@ $(document).on('knack-scene-render.any', function(event, page) {
 		ev.preventDefault();
 		fetchNextTest();
 	});
-
-	// Force logged-in user back to compatibility results
-	if ( 0 === window.location.hash.indexOf('#account-details' ) ) {
-		window.location.hash = '#compatibility-results';
-	}
 
 	function fetchNextTest() {
 		launchTestButton.attr('disabled', 'disabled');
