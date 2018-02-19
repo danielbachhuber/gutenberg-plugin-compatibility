@@ -65,19 +65,24 @@ $(document).on('knack-scene-render.any', function(event, page) {
 		};
 		Knack.showSpinner();
 		$.ajax({
-			url: requestURL,
-			method: "PUT",
-			data: JSON.stringify(requestData),
-			beforeSend: function(xhr){
-				xhr.setRequestHeader('Authorization', Knack.getUserToken() );
-				xhr.setRequestHeader('X-Knack-Application-Id', Knack.application_id );
-				xhr.setRequestHeader('content-type', 'application/json');
-			},
-		})
-		.done(function(result) {
-			Knack.hideSpinner();
-			// Load the correct view
-			window.location.hash = '#compatibility-results/edit-plugin/' + pluginID + '/';
+			url: 'https://api.wordpress.org/plugins/info/1.0/' + slug + '.json',
+			method: 'GET',
+		}).done(function( plugin ){
+			requestData['field_4'] = plugin['version'];
+			$.ajax({
+				url: requestURL,
+				method: 'PUT',
+				data: JSON.stringify(requestData),
+				beforeSend: function(xhr){
+					xhr.setRequestHeader('Authorization', Knack.getUserToken() );
+					xhr.setRequestHeader('X-Knack-Application-Id', Knack.application_id );
+					xhr.setRequestHeader('content-type', 'application/json');
+				},
+			}).done(function(result) {
+				Knack.hideSpinner();
+				// Load the correct view
+				window.location.hash = '#compatibility-results/edit-plugin/' + pluginID + '/';
+			});
 		});
 	}
 
