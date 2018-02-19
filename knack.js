@@ -16,6 +16,13 @@ $(document).on('knack-scene-render.any', function(event, page) {
 		fetchNextTest();
 	});
 
+	var hash = window.location.hash;
+	hash = hash.replace(/\/$/,'');
+	// Force logged-in user back to compatibility results
+	if ( '#account-details' === hash ) {
+		window.location.hash = '#compatibility-results';
+	}
+
 	function fetchNextTest() {
 		var baseURL = 'https://api.knack.com/v1/pages/scene_1/views/view_1/records';
 		var requestFilters = [
