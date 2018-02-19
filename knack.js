@@ -54,6 +54,8 @@ $(document).on('knack-scene-render.any', function(event, page) {
 	}
 
 	function setTestingState(pluginID, slug) {
+		// Load the correct view
+		window.location.hash = '#compatibility-results/edit-plugin/' + pluginID + '/';
 		var baseURL = 'https://api.knack.com/v1/pages/scene_1/views/view_1/records/';
 		var requestURL = baseURL + pluginID;
 		var requestData = {
