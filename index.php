@@ -50,7 +50,7 @@
 
 	<div class="container">
 		<header class="page-header">
-			<h1>Gutenberg Plugin Compatibility</h1>
+			<h1><a href="/">Gutenberg Plugin Compatibility</a></h1>
 		</header>
 
 		<div class="page-content">
