@@ -70,7 +70,7 @@
 
 			<p><strong><em>This sounds important. What do I need to do?</em></strong></p>
 
-			<p>Simply launch a test environment and then record your results. If you have questions, please <a href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a> and we'll do our best to clarify.</p>
+			<p>Simply launch an environment, test the installed plugin, and record your results. If you have questions, please <a href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a> and we'll do our best to clarify.</p>
 
 			<div class="callout warning" id="requires-login" style="display:none;">
 				<p>Plugin testing requires signing in. Please register for an account, and sign in once your account is approved.</p>
