@@ -54,23 +54,7 @@
 		</header>
 
 		<div class="page-content">
-			<p>Help us test Gutenberg plugin compatibility!</p>
-
-			<p><strong><em>How do I know whether a plugin is compatible with Gutenberg?</em></strong></p>
-
-			<p>For our purposes, a plugin is compatible with Gutenberg when:</p>
-			<ol>
-				<li>A WordPress user can perform the same functional task with Gutenberg active. For instance, the "Add Media" button doesn't exist in Gutenberg, but a WordPress user can add media with the inserter. Feature-parity, essentially.</li>
-				<li>There are no (obvious) errors when the WordPress plugin is active alongside Gutenberg.</li>
-			</ol>
-
-			<p><strong><em>Why are you doing this?</em></strong></p>
-
-			<p>We want to make sure everyone can use Gutenberg but <em>plugin incompatibility</em> is a likely reason they won't be able to. Having this compatibility data will help us strategize the WordPress 5.0 release process.</p>
-
-			<p><strong><em>This sounds important. What do I need to do?</em></strong></p>
-
-			<p>Simply launch an environment, test the installed plugin, and record your results. If you have questions, please <a href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a> and we'll do our best to clarify.</p>
+			<p>Help us test Gutenberg plugin compatibility! Launch an environment, test the installed plugin, and record your results. <a target="_blank" href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility#gutenberg-plugin-compatibility">Read the project README</a> for a more thorough introduction. If you have questions, please <a target="_blank" href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a> and we'll do our best to clarify.</p>
 
 			<div class="callout warning" id="requires-login" style="display:none;">
 				<p>Plugin testing requires signing in. Please register for an account, and sign in once your account is approved.</p>
