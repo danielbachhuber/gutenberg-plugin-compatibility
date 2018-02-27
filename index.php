@@ -9,7 +9,7 @@
 	<title>Gutenberg Plugin Compatibility</title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" />
-	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
 	<style>
 		.container {
