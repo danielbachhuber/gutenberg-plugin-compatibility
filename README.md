@@ -18,10 +18,21 @@ We want to make sure everyone can use Gutenberg when WordPress 5.0 is released. 
 
 **_This sounds important. What do I need to do?_**
 
-Once you've registered an account, simply launch an environment, test the installed plugin, and record your results. See [Testing](#testing) for more details.
+See [Testing](#testing) for more details.
+
+Once you've registered an account, simply launch an environment, test the installed plugin, and record your results.
 
 ## Testing
 
+Before you begin, you'll need to [register for an account](https://plugincompat.danielbachhuber.com/#account-details/) if you haven't done so already. Being logged in gives us a revision log for plugin result modification.
+
+Once you're logged in, hit the "Launch Test Environment" button to create a fresh WordPress installation. This installation will include both Gutenberg and a randomly-selected plugin to test.
+
+@todo clarify what you're looking for
+
+@todo clarify logging results
+
+@todo more
 
 ## Meta
 
