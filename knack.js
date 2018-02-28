@@ -35,7 +35,7 @@ $(document).on('knack-scene-render.any', function(event, page) {
 
 	function fetchNextTest() {
 		launchTestButton.attr('disabled', 'disabled');
-		launchTestButton.text('Creating (takes several seconds)...');
+		launchTestButton.text('Creating (takes 5-10 seconds)...');
 		var baseURL = 'https://api.knack.com/v1/pages/scene_1/views/view_1/records';
 		var requestFilters = [
 			{
