@@ -62,9 +62,12 @@
 				<p>Plugin testing requires authentication. Please register for an account, and sign in once your account is approved.</p>
 			</div>
 
+			<div class="callout alert" id="error-message" style="display: none;"><p></p></div>
+
 			<div class="button-group">
 				<a id="register-login" href="#account-details" class="button" disabled="disabled" style="display:none;">Register / Login</a>
-				<button id="launch-test-button" class="button" disabled="disabled">Launch Test Environment</button>
+				<button id="launch-test-button" class="button" disabled="disabled">Create New Test Environment</button>
+				<a id="editor-button" href="#" disabled="disabled" class="button secondary" target="_blank" style="display:none;">Open Editor</a>
 			</div>
 
 			<div id="knack-dist_2">Loading plugin database over the internet...</div>

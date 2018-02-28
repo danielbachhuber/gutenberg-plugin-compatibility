@@ -1,7 +1,10 @@
 $(document).on('knack-scene-render.any', function(event, page) {
-	var launchTestButton = $('#launch-test-button');
+	var launchTestButton = $('#launch-test-button'),
+		editorButton = $('#editor-button'),
+		errorMessage = $('#error-message');
 
 	launchTestButton.off( 'click.launch-test' );
+	errorMessage.hide();
 
 	if (typeof Knack.getUserToken() !== 'undefined' ) {
 		launchTestButton.removeAttr('disabled').show();
@@ -20,11 +23,19 @@ $(document).on('knack-scene-render.any', function(event, page) {
 	launchTestButton.on( 'click.launch-test', function(ev) {
 		ev.stopPropagation();
 		ev.preventDefault();
+		editorButton.attr('disabled','disabled' ).hide();
 		fetchNextTest();
 	});
 
+	function handleError(xhr) {
+		Knack.hideSpinner();
+		errorMessage.find('p').text(xhr.responseText);
+		errorMessage.show();
+	}
+
 	function fetchNextTest() {
 		launchTestButton.attr('disabled', 'disabled');
+		launchTestButton.text('Creating (takes several seconds)...');
 		var baseURL = 'https://api.knack.com/v1/pages/scene_1/views/view_1/records';
 		var requestFilters = [
 			{
@@ -43,19 +54,20 @@ $(document).on('knack-scene-render.any', function(event, page) {
 				xhr.setRequestHeader('X-Knack-Application-Id', Knack.application_id );
 				xhr.setRequestHeader('content-type', 'application/json');
 			},
-		})
-		.done(function(result) {
-			Knack.hideSpinner();
+		}).success(function(result) {
 			var pluginID   = result.records[0].id;
 			var pluginSlug = result.records[0].field_1;
-			var sandbox_base_link = 'http://wpsandbox.pro/create?src=spotless-dove&key=jkiaIH00a5zATo0m&url=wp-admin/plugins.php&plugins=';
-			window.open( sandbox_base_link + pluginSlug );
-			setTestingState(pluginID, pluginSlug);
-			launchTestButton.removeAttr('disabled');
-		});
+			$.ajax({
+				url: '/launch-environment.php?plugins=' + pluginSlug,
+				type: 'GET',
+				cache: false
+			}).success(function( sandboxUrl ){
+				setTestingState(pluginID, pluginSlug, sandboxUrl);
+			}).error(handleError);
+		}).error(handleError);
 	}
 
-	function setTestingState(pluginID, slug) {
+	function setTestingState(pluginID, slug, sandboxUrl) {
 		var baseURL = 'https://api.knack.com/v1/pages/scene_1/views/view_1/records/';
 		var requestURL = baseURL + pluginID;
 		var requestData = {
@@ -66,7 +78,7 @@ $(document).on('knack-scene-render.any', function(event, page) {
 		$.ajax({
 			url: 'https://api.wordpress.org/plugins/info/1.0/' + slug + '.json',
 			type: 'GET',
-		}).done(function( plugin ){
+		}).success(function( plugin ){
 			requestData['field_4'] = plugin['version'];
 			$.ajax({
 				url: requestURL,
@@ -77,12 +89,17 @@ $(document).on('knack-scene-render.any', function(event, page) {
 					xhr.setRequestHeader('X-Knack-Application-Id', Knack.application_id );
 					xhr.setRequestHeader('content-type', 'application/json');
 				},
-			}).done(function(result) {
+			}).success(function(result) {
 				Knack.hideSpinner();
+				launchTestButton.removeAttr('disabled');
+				launchTestButton.text('Create New Test Environment');
+				editorButton.removeAttr('disabled');
+				editorButton.attr( 'href', sandboxUrl );
+				editorButton.show();
 				// Load the correct view
 				window.location.hash = '#compatibility-results/edit-plugin/' + pluginID + '/';
-			});
-		});
+			}).error(handleError);
+		}).error(handleError);
 	}
 
 });
