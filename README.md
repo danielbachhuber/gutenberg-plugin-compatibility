@@ -26,7 +26,7 @@ See [Testing](#testing) for more details.
 
 ## Testing
 
-Before you begin, you'll need to [register for an account](https://plugincompat.danielbachhuber.com/#account-details/) if you haven't done so already. Our ideal testers are people who have time to test dozens of plugins.
+Before you begin, you'll need to [register for an account](https://plugincompat.danielbachhuber.com/#account-details/) if you haven't done so already. Our ideal testers are people who have time to test dozens of plugins. Each plugin can take a minute to test, so you can probably work through 30 plugins in 30 minutes.
 
 ### Creating the test environment
 
