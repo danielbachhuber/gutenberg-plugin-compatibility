@@ -67,7 +67,7 @@ When you feel confident with your assessment, log your findings in the database:
 * "Tested version" is the plugin version, not the Gutenberg version. This should be automatically populated when the sandbox is created.
 * If you can find some official conversation about Gutenberg compatibility for the plugin, please include that link as well.
 
-Hit "Submit" to save your results, and then click "Create New Test Environment" to launch an environment with a different plugin.
+Double-check all of the data you've entered. Once you're satisfied hit "Submit" to save your results, and then click "Create New Test Environment" to launch an environment with a different plugin.
 
 ## Meta
 
