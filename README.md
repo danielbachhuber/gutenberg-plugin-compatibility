@@ -14,6 +14,8 @@ For our purposes, a plugin is compatible with Gutenberg when:
 * A WordPress user can perform the same functional task with Gutenberg active. For instance, the "Add Media" button doesn't exist in Gutenberg, but a WordPress user can add media with the inserter. Feature-parity, essentially.
 * There are no (obvious) errors when the WordPress plugin is active alongside Gutenberg.
 
+Some plugins are pre-classified as 'likely_yes' or 'likely_no' based on reasonable assumptions (e.g. a caching plugin probably doesn't expose editor-specific functionality).
+
 **_Why are you doing this?_**
 
 We want to make sure everyone can use Gutenberg when WordPress 5.0 is released. Plugin incompatibility is statistically one of the most likely reasons they won't be able to. Having this compatibility data will help us strategize the release process.
@@ -28,7 +30,7 @@ Once you've registered an account, simply launch an environment, test the instal
 
 Before you begin, you'll need to [register for an account](https://plugincompat.danielbachhuber.com/#account-details/) if you haven't done so already. Being logged in gives us a revision log for plugin result modification.
 
-Once you're logged in, hit the "Launch Test Environment" button to create a fresh WordPress installation. The installation will include both Gutenberg and a randomly-selected plugin to test.
+Once you're logged in, hit the "Launch Test Environment" button to create a fresh WordPress installation with both Gutenberg and a randomly-selected plugin with `is_compatible=unknown`. In this process, `is_compatible` is set to `testing`.
 
 Look at the Classic Editor to see if the plugin exposes any editor-specific functionality (e.g. a meta box, TinyMCE button, etc.):
 
@@ -37,9 +39,12 @@ Look at the Classic Editor to see if the plugin exposes any editor-specific func
 
 When you feel confident with your assessment, log your results in the database:
 
-* Please clarify your response with sufficient detail for the next person who reviews.
+* Mark `is_compatible=yes` or `is_compatible=no` based on your judgement.
+* Use the open-ended text field to clarify your response with sufficient detail for the next person who reviews.
 * "Tested version" is the plugin version, not the Gutenberg version. If you use the interactive tool, the plugin version will be automatically populated.
 * If you can find some official conversation about Gutenberg compatibility for the plugin, please include that link as well.
+
+Hit "Submit" to save your results.
 
 ## Meta
 
