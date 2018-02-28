@@ -59,7 +59,7 @@
 			<p><a target="_blank" href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility#gutenberg-plugin-compatibility">Read the project README</a> for a more thorough introduction. If you have questions, please <a target="_blank" href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a> and we'll do our best to clarify.</p>
 
 			<div class="callout warning" id="requires-login" style="display:none;">
-				<p>Plugin testing requires signing in. Please register for an account, and sign in once your account is approved.</p>
+				<p>Plugin testing requires authentication. Please register for an account, and sign in once your account is approved.</p>
 			</div>
 
 			<div class="button-group">
