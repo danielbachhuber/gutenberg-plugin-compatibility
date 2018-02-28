@@ -28,19 +28,19 @@ See [Testing](#testing) for more details.
 
 Before you begin, you'll need to [register for an account](https://plugincompat.danielbachhuber.com/#account-details/) if you haven't done so already. Our ideal testers are people who have time to test dozens of plugins.
 
-### Create test environment
+### Creating the test environment
 
 ![image](https://user-images.githubusercontent.com/36432/36801021-ca3a27ea-1c65-11e8-956c-02d460ba07e8.png)
 
 Once you've logged in, click the "Create Test Environment" button to create a fresh WordPress sandbox with both Gutenberg and a randomly-selected plugin with `is_compatible=unknown`. In this process, `is_compatible` is set to `testing` for the plugin. It can take several seconds for the sandbox to spin up.
 
-### Open editor in sandbox
+### Opening the WordPress admin
 
 ![image](https://user-images.githubusercontent.com/36432/36801215-4ed987d4-1c66-11e8-9815-7a5b4316eb9f.png)
 
 After the sandbox is created, you'll be taken to the randomly-selected plugin's reporting form. Click the "Open Editor" button to access the Manage Posts screen in the WordPress admin.
 
-### Manually evaluate compatibility
+### Manually evaluating compatibility
 
 ![image](https://user-images.githubusercontent.com/36432/36801289-8bd15d7e-1c66-11e8-8be4-8e0b71d9ef27.png)
 
@@ -50,7 +50,7 @@ In the WordPress backend, first look at the Classic Editor to see if the plugin 
 
 **If the plugin doesn't expose editor UI**, then it's likely compatible with Gutenberg. But again, use your best judgement and assess the plugin's description, etc.
 
-### Log compatibility findings
+### Recording compatibility findings
 
 ![image](https://user-images.githubusercontent.com/36432/36801649-87a50114-1c67-11e8-9d99-5a92b63550aa.png)
 
