@@ -18,15 +18,15 @@ Once a plugin is manually reviewed in a test environment, it's either marked `is
 
 We want to make sure everyone can use Gutenberg when WordPress 5.0 is released. Plugin incompatibility is statistically one of the most likely reasons they won't be able to. Having this compatibility data will help us strategize the release process.
 
+The WordPress.org Plugins Directory has an incredibly long tail distribution of `active_installs`. The 5000 plugins listed in the Gutenberg Compatibility Database [represent >90% of the total](https://danielbachhuber.com/2018/01/04/brief-wordpress-org-plugin-directory-data-analysis/) `active_installs` count.
+
 **_This sounds important. What can I do to help?_**
 
 See [Testing](#testing) for more details.
 
-Once you've registered an account, simply launch an environment, test the installed plugin, and record your results.
-
 ## Testing
 
-Before you begin, you'll need to [register for an account](https://plugincompat.danielbachhuber.com/#account-details/) if you haven't done so already. Being logged in gives us a revision log for plugin result modification.
+Before you begin, you'll need to [register for an account](https://plugincompat.danielbachhuber.com/#account-details/) if you haven't done so already. Our ideal testers are people who have time to test dozens of plugins.
 
 Once you're logged in, hit the "Launch Test Environment" button to create a fresh WordPress installation with both Gutenberg and a randomly-selected plugin with `is_compatible=unknown`. In this process, `is_compatible` is set to `testing`.
 
