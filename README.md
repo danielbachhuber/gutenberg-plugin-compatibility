@@ -77,5 +77,6 @@ This repository is a bunch of files that power the Gutenberg Plugin Compatibilit
 2. [Knack](https://www.knack.com/) is used to host our database and make it editable.
 3. [index.php](index.php) renders the webpage with the Knack database application.
 4. [knack.js](knack.js) powers our logic to launch a new environment and bring you to the edit plugin view.
+5. [launch-environment.php](launch-environment.php) calls out to create the sandbox environment.
 
 Everything in the repository is set up to auto-deploy to the server that hosts [plugincompat.danielbachhuber.com](https://plugincompat.danielbachhuber.com).
