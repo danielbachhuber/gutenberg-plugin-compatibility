@@ -42,7 +42,7 @@ After the sandbox is created, you'll be taken to the randomly-selected plugin's 
 
 ### Manually evaluating compatibility
 
-![image](https://user-images.githubusercontent.com/36432/36801289-8bd15d7e-1c66-11e8-8be4-8e0b71d9ef27.png)
+![image](https://user-images.githubusercontent.com/36432/36803008-47befaa6-1c6b-11e8-8d83-b4491044b4f1.png)
 
 In the WordPress backend, first look at the Classic Editor to see if the plugin exposes any editor-specific functionality (e.g. a meta box, TinyMCE button, etc.). Use your best judgement in the process; plugin may require some configuration before it exposes editor-specific functionality.
 
