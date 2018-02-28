@@ -74,7 +74,7 @@ Double-check all of the data you've entered. Once you're satisfied hit "Submit" 
 This repository is a bunch of files that power the Gutenberg Plugin Compatibility database:
 
 1. [plugin-stats.php](plugin-stats.php) downloads key plugin data from the WordPress.org REST API.
-2. [Knack](https://www.knack.com/) is used to host our database and make it editable.
+2. [Knack](https://www.knack.com/) is a SaaS application used to store our database and make it editable.
 3. [index.php](index.php) renders the webpage with the Knack database application.
 4. [knack.js](knack.js) powers our logic to launch a new environment and bring you to the edit plugin view.
 5. [launch-environment.php](launch-environment.php) calls out to create the sandbox environment.
