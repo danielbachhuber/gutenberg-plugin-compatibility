@@ -3,24 +3,22 @@ Gutenberg Plugin Compatibility
 
 ## Overview
 
-This project's goal is to produce a database documenting whether or not WordPress plugins are compatible with [Gutenberg](https://wordpress.org/gutenberg/).
-
-For any questions beyond what's covered in this document, [please open an issue](https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues) and we'll do our best to help out. The complete backstory is covered in [wordpress/gutenberg#4072](https://github.com/WordPress/gutenberg/issues/4072).
+This project's goal is to produce a database documenting whether or not WordPress plugins are compatible with [Gutenberg](https://wordpress.org/gutenberg/). For any questions beyond what's covered in this document, [please open an issue](https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues) and we'll do our best to help out. The complete backstory is covered in [wordpress/gutenberg#4072](https://github.com/WordPress/gutenberg/issues/4072).
 
 **_How do I know whether a plugin is compatible with Gutenberg?_**
 
 For our purposes, a plugin is compatible with Gutenberg when:
 
-* A WordPress user can perform the same functional task with Gutenberg active. For instance, the "Add Media" button doesn't exist in Gutenberg, but a WordPress user can add media with the inserter. Feature-parity, essentially.
+* A WordPress user can perform the same functional task with Gutenberg active. For instance, if the plugin includes an "Add Media" button, it's considered Gutenberg-compatible when it has a block registered for the Gutenberg inserter. Feature-parity, essentially.
 * There are no (obvious) errors when the WordPress plugin is active alongside Gutenberg.
 
-Some plugins are pre-classified as 'likely_yes' or 'likely_no' based on reasonable assumptions (e.g. a caching plugin probably doesn't expose editor-specific functionality).
+Once a plugin is manually reviewed in a test environment, it's either marked `is_compatible=yes` or `is_compatible=no` in the database. Some plugins are pre-classified as `is_compatible=likely_yes` or `is_compatible=likely_no` based on reasonable assumptions (e.g. a caching plugin probably doesn't expose editor-specific functionality).
 
 **_Why are you doing this?_**
 
 We want to make sure everyone can use Gutenberg when WordPress 5.0 is released. Plugin incompatibility is statistically one of the most likely reasons they won't be able to. Having this compatibility data will help us strategize the release process.
 
-**_This sounds important. What do I need to do?_**
+**_This sounds important. What can I do to help?_**
 
 See [Testing](#testing) for more details.
 
