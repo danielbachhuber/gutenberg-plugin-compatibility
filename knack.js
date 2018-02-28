@@ -55,8 +55,9 @@ $(document).on('knack-scene-render.any', function(event, page) {
 				xhr.setRequestHeader('content-type', 'application/json');
 			},
 		}).success(function(result) {
-			var pluginID   = result.records[0].id;
-			var pluginSlug = result.records[0].field_1;
+			var plugin     = result.records[Math.floor(Math.random() * result.records.length)];
+			var pluginID   = plugin.id;
+			var pluginSlug = plugin.field_1;
 			$.ajax({
 				url: '/launch-environment.php?plugins=' + pluginSlug,
 				type: 'GET',
