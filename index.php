@@ -15,7 +15,7 @@
 		.container {
 			margin-left: auto;
 			margin-right: auto;
-			max-width: 860px;
+			max-width: 1024px;
 		}
 		.page-header,
 		.page-footer {
