@@ -48,6 +48,11 @@ In the WordPress backend, first look at the Classic Editor to see if the plugin 
 
 **If the plugin does expose functionality in the Classic Editor**, open the Gutenberg Editor to see if the user can perform the same functional task. Everything should work 100% as expected for the plugin to be considered completely compatible. Even little bugs should be considered incompatibilities; this is valuable data to document.
 
+Common incompatibilities include:
+
+* Plugin adds an "Add Media" button in the Classic Editor, which doesn't exist in Gutenberg.
+* Plugin renders a metabox in Gutenberg that isn't fully-functional for some reason.
+
 **If the plugin doesn't expose editor UI**, then it's likely compatible with Gutenberg. But again, use your best judgement and assess the plugin's description, etc.
 
 ### Recording compatibility findings
