@@ -57,7 +57,7 @@ Common incompatibilities include:
 
 ### Recording compatibility findings
 
-![image](https://user-images.githubusercontent.com/36432/36801649-87a50114-1c67-11e8-9d99-5a92b63550aa.png)
+![image](https://user-images.githubusercontent.com/36432/36802794-b88240c8-1c6a-11e8-99ae-1370d99cfafd.png)
 
 When you feel confident with your assessment, log your findings in the database:
 
