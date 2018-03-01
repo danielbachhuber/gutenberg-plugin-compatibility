@@ -28,6 +28,8 @@ See [Testing](#testing) for more details.
 
 Before you begin, you'll need to [register for an account](https://plugincompat.danielbachhuber.com/#account-details/) if you haven't done so already. Our ideal testers are people who have time to test dozens of plugins. Each plugin can take a minute to test, so you can probably work through 30 plugins in 30 minutes.
 
+Visual learner? [Watch this video walkthrough](https://www.youtube.com/watch?v=qX4iZ9hCPyk), and then read the rest of the documentation (which has important specifics).
+
 ### Creating the test environment
 
 ![image](https://user-images.githubusercontent.com/36432/36801021-ca3a27ea-1c65-11e8-956c-02d460ba07e8.png)
