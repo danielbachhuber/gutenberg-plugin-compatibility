@@ -32,7 +32,7 @@ Before you begin, you'll need to [register for an account](https://plugincompat.
 
 ![image](https://user-images.githubusercontent.com/36432/36801021-ca3a27ea-1c65-11e8-956c-02d460ba07e8.png)
 
-Once you've logged in, click the "Create Test Environment" button to create a fresh WordPress sandbox with both Gutenberg and a randomly-selected plugin with `is_compatible=unknown`. In this process, `is_compatible` is set to `testing` for the plugin. It can take several seconds for the sandbox to spin up.
+Once you've logged in, click the "Create Test Environment" button to create a fresh WordPress sandbox (donated by [WP Sandbox](https://wpsandbox.io/)) with both Gutenberg and a randomly-selected plugin with `is_compatible=unknown`. In this process, `is_compatible` is set to `testing` for the plugin. It can take several seconds for the sandbox to spin up.
 
 ### Opening the WordPress admin
 
