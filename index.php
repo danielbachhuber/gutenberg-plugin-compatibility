@@ -33,6 +33,10 @@
 		.kn-container .kn-select:not(empty)::after {
 			display: none;
 		}
+		.kn-container .filters-list select:not(empty) select,
+		.kn-container .kn-select:not(empty) select {
+			height: 35px
+		}
 	</style>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
