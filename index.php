@@ -58,9 +58,9 @@
 		</header>
 
 		<div class="page-content">
-			<p>Help us test Gutenberg plugin compatibility! Simply launch an environment, test the installed plugin, and record your results.</p>
+			<p>Help us test Gutenberg plugin compatibility!</p>
 
-			<p><a target="_blank" href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility#gutenberg-plugin-compatibility">Read the project README</a> for a more thorough introduction. If you have questions, please <a target="_blank" href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a> and we'll do our best to clarify.</p>
+			<p>Read the <a target="_blank" href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility#gutenberg-plugin-compatibility">full project README</a> for a complete introduction. All testing is performed in WordPress test environments are provided by <a target="_blank" href="https://wpsandbox.io/">WP Sandbox</a>. If you have questions, please <a target="_blank" href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a> and we'll do our best to clarify.</p>
 
 			<div class="callout warning" id="requires-login" style="display:none;">
 				<p>Plugin testing requires authentication. Please register for an account, and sign in once your account is approved.</p>
