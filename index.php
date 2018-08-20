@@ -58,24 +58,11 @@
 		</header>
 
 		<div class="page-content">
-			<p>Help us test Gutenberg plugin compatibility!</p>
+			<p>This project is now complete.</p>
 
-			<p><strong>Read the <a target="_blank" href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility#gutenberg-plugin-compatibility">full project README</a> for a complete introduction before testing</strong>. All testing is performed in WordPress test environments are provided by <a target="_blank" href="https://wpsandbox.io/">WP Sandbox</a>. If you have questions, please <a target="_blank" href="https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues">open an issue</a> and we'll do our best to clarify.</p>
+			<p>The Gutenberg Plugin Compatibility database [started as a research project](https://github.com/WordPress/gutenberg/issues/4072). The research is no longer actively being pursued. The database has been shut down because it's not actively maintained.</p>
 
-			<div class="callout warning" id="requires-login" style="display:none;">
-				<p>Plugin testing requires authentication. Please register for an account, and sign in once your account is approved.</p>
-			</div>
-
-			<div class="callout alert" id="error-message" style="display: none;"><p></p></div>
-
-			<div class="button-group">
-				<a id="register-login" href="#account-details" class="button" disabled="disabled" style="display:none;">Register / Login</a>
-				<button id="launch-test-button" class="button" disabled="disabled">Create New Test Environment</button>
-				<a id="editor-button" href="#" disabled="disabled" class="button secondary" target="_blank" style="display:none;">Open Editor</a>
-			</div>
-
-			<div id="knack-dist_2">Loading plugin database over the internet...</div>
-			<script type="text/javascript">app_id="5a7a319707b4fd4dcd5ab1a5";distribution_key="dist_2";</script><script type="text/javascript" src="https://loader.knack.com/5a7a319707b4fd4dcd5ab1a5/dist_2/knack.js"></script>
+			<p>If you'd like to review the final data, you can <a href="/20180820plugincompatibility.csv">download the database as CSV</a>.</p>
 
 		</div>
 

@@ -1,6 +1,8 @@
 Gutenberg Plugin Compatibility
 ==============================
 
+**Hello! This research project has concluded, and the database is no longer being actively maintained.**
+
 ## Overview
 
 This project's goal is to produce a [database](https://plugincompat.danielbachhuber.com/) documenting whether or not WordPress plugins are compatible with [Gutenberg](https://wordpress.org/gutenberg/). For any questions beyond what's covered in this document, [please open an issue](https://github.com/danielbachhuber/gutenberg-plugin-compatibility/issues) and we'll do our best to help out. The complete backstory is covered in [wordpress/gutenberg#4072](https://github.com/WordPress/gutenberg/issues/4072).
