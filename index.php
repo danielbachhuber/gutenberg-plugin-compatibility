@@ -58,9 +58,9 @@
 		</header>
 
 		<div class="page-content">
-			<p>This project is now complete.</p>
+			<p><strong>This project is now complete.</strong></p>
 
-			<p>The Gutenberg Plugin Compatibility database [started as a research project](https://github.com/WordPress/gutenberg/issues/4072). The research is no longer actively being pursued. The database has been shut down because it's not actively maintained.</p>
+			<p>The Gutenberg Plugin Compatibility database <a href="https://github.com/WordPress/gutenberg/issues/4072">started as a research project</a> and is no longer actively being pursued. The database has been shut down because it's not actively maintained.</p>
 
 			<p>If you'd like to review the final data, you can <a href="/20180820plugincompatibility.csv">download the database as CSV</a>.</p>
 
